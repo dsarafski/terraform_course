@@ -3,14 +3,14 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-west-1"
+  region = "us-east-1"
 
   # Allow any 2.x version of the AWS provider
   version = "~> 2.0"
 }
 
 resource "aws_launch_configuration" "example" {
-  image_id        = "ami-035966e8adab4aaad"
+  image_id        = "ami-07ebfd5b3428b6f4d"
   instance_type   = var.instance_type
   security_groups = [aws_security_group.instance.id]
   user_data       = data.template_file.user_data.rendered
@@ -146,7 +146,7 @@ data "terraform_remote_state" "db" {
   config = {
     bucket = var.db_remote_state_bucket
     key    = var.db_remote_state_key
-    region = "eu-west-1"
+    region = "us-east-1"
   }
 }
 

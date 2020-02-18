@@ -1,7 +1,7 @@
 variable "bucket_name" {
   description = "The name of the S3 bucket. Must be globally unique."
   type        = string
-  default     = "sarafski-terraform-up-and-running-state"
+  default     = "dsarafski-terraform-up-and-running-state"
 }
 
 variable "table_name" {
