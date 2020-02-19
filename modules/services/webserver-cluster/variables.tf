@@ -60,3 +60,9 @@ variable "alb_security_group_name" {
   type        = string
   default     = "terraform-example-alb"
 }
+
+variable "custom_tags" {
+  description = "Custom tag to set on the instance in the ASG"
+  type = map(string)
+  default = {}
+}

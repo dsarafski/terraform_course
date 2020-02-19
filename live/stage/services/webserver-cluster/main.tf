@@ -1,5 +1,5 @@
 module "webserver_cluster" {
-  source = "../../../modules/services/webserver-cluster"
+  source = "git::https://github.com/dsarafski/modules.git//services/webserver-cluster?ref=40310348322a345a0b70cb8e29659d13fb68368a"
 
   cluster_name           = "webservers-stage"
   db_remote_state_bucket = "dsarafski-terraform-up-and-running-state"
