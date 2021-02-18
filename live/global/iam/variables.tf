@@ -3,3 +3,14 @@ variable "user_names" {
   type        = list(string)
   default     = ["neo", "trinity", "morpheus"]
 }
+
+
+variable "test_names" {
+  description = "Test IAM user with this names"
+  type = map(string)
+  default = {
+    Name = "Lili"
+    Hobby = "Hunting"
+    Project = "Linuxa-Test"
+  }
+}
